@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
-const Figure = styled.figure`
-    flex-grow: 0;
-    flex-shrink 1;
-    flex-basis: auto;
-    align-self: center;
-    max-width: 100%;
-    height: auto;
-    width: auto;
+const Figure = styled.div`
+    height: 40vh;
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        width: 400px;
+    }
 `
 
 export { Figure }

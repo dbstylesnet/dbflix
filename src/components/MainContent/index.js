@@ -6,7 +6,7 @@ import avatar from '../../images/avatar.jpg'
 import band from '../../images/band.jpeg'
 import ender from '../../images/ender.jpeg'
 import warcraft from '../../images/warcraft.jpg'
-import xmen from '../../images/xmen.jpeg'
+import xmen from '../../images/xmen.jpg'
 
 const MainContent = () => {
     return(
@@ -17,9 +17,9 @@ const MainContent = () => {
                 <Movie imageSrc={band} />
             </Wrapper>
             <Wrapper>
-                <Movie imageSrc={ender} />
                 <Movie imageSrc={warcraft} />
                 <Movie imageSrc={xmen} />
+                <Movie imageSrc={ender} />
             </Wrapper>
         </section>
     )

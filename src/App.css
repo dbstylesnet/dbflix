@@ -11,11 +11,6 @@ html {
     box-sizing: inherit;
 }
 
-.full-movie {
-  display: block;
-  width: 100%;
-}
-
 
 .App {
   text-align: center;
@@ -34,6 +29,8 @@ html {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: verdana;
+  font-variant: small-caps;
 }
 
 .App-link {
