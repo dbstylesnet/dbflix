@@ -9,7 +9,9 @@ import { Figure } from './styles'
 const Movie = ({ ...props }) => {
     return (
         <Figure>
-            <img src={props.imageSrc} alt='JSlogo' />
+            {/* <input type="checkbox" class="toggle-box" id="toggle-box1"> */}
+            <label for="toggle-box" class="boxy">{props.title}</label>
+            <img src={props.imageSrc} alt={props.title} />
         </Figure>
     )
 }

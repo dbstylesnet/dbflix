@@ -1,21 +1,17 @@
-import React from 'react';
-import MainContent from './components/MainContent';
-import './App.css';
-import ender from './images/ender.jpeg'
+import React from 'react'
+import MainContent from './components/MainContent'
+import './App.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <p>
-                    Kodeflix Project
-                </p>
-            </header>
-            <img src={ender} alt='Movie' className='full-movie' />
-            <br />
+            <Header />
             <MainContent />
+            <Footer />
         </div>
-    );
+    ); 
 }
 
-export default App;
+export default App
