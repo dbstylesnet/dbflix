@@ -1,17 +1,17 @@
 import React from 'react'
 import MainContent from './components/MainContent'
-import './App.css'
+import { Wrapper } from './styles'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-function App() {
+const Kodflix = () => {
     return (
-        <div className="App">
+        <Wrapper>
             <Header />
             <MainContent />
             <Footer />
-        </div>
+        </Wrapper>
     ); 
 }
 
-export default App
+export default Kodflix

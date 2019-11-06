@@ -10,12 +10,12 @@ const Figure = styled.div`
         cursor: pointer;  
     }
     &:hover label {
-        background: rgba(0, 0, 0, .5);  
+        background: rgba(0, 0, 0, .7);  
         cursor: pointer;  
         transition: background 300ms ease-in-out;
     }
     &:active label {
-        background: rgba(0, 0, 0, .8);  
+        background: rgba(0, 0, 0, .9);  
         transition: background 300ms ease-in-out;
     } 
 
@@ -23,13 +23,15 @@ const Figure = styled.div`
         position: absolute;
         width: 100%;
         height: 20%;
-        background: rgba(0, 0, 0, .1);
+        background: rgba(0, 0, 0, .5);
         color: white;
         display: flex;
         align-self: flex-end;
         justify-content: center;
         align-items: center;
         transition: background 300ms ease-in-out;
+        font-family: tahoma;
+        font-size: 20px;
     }
 
     img {

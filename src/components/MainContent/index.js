@@ -11,7 +11,7 @@ import xmen from '../../images/xmen.jpg'
 
 const MainContent = () => {
     return(
-        <section>
+        <>
             <Wrapper>
                 <Movie imageSrc={avengers}  title='Avengers'/>
                 <Movie imageSrc={avatar} title='Avatar' />
@@ -22,7 +22,7 @@ const MainContent = () => {
                 <Movie imageSrc={xmen} title='X-men' />
                 <Movie imageSrc={ender} title={`Ender's game`} />
             </Wrapper>
-        </section>
+        </>
     )
 }
 
