@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-    background: #333;
+    background: rgba(0, 0, 0, .2);
     display: flex;
     height: 10vh;
     clear: both;
@@ -9,8 +9,9 @@ const Wrapper = styled.div`
     justify-content: center;
     color: white;
     font-family: verdana;
-    font-size: 12px;
+    font-size: 16px;
     font-variant: small-caps;
+    margin: 60px 0 0 0;
 `
 
 export { Wrapper }

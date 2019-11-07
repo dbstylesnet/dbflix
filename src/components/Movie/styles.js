@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 const Figure = styled.div`
-    height: 40vh;
     overflow: hidden;
     position: relative;
     display: flex;
+    margin: 60px 30px 0;
     align-items: flex-start;
     &:hover {
         cursor: pointer;  
@@ -36,7 +36,7 @@ const Figure = styled.div`
 
     img {
         max-width: 100%;
-        height: auto;
+        height: 100%;
         width: 400px;
     }
 
