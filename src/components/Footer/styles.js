@@ -2,16 +2,19 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
     background: rgba(0, 0, 0, .2);
-    display: flex;
     height: 10vh;
-    clear: both;
     align-items: center;
-    justify-content: center;
     color: white;
-    font-family: verdana;
-    font-size: 16px;
-    font-variant: small-caps;
+    font-size: 15px;
     margin: 60px 0 0 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    div {
+        max-width: 80vw;
+        margin: 0 10vw;
+    }
 `
 
 export { Wrapper }

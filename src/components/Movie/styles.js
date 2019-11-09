@@ -6,7 +6,7 @@ const Figure = styled.div`
     // grid-gap
     // display: flex;
     // margin: 60px 30px 0;
-    box-shadow: 0px 0px 2px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     align-items: flex-start;
     &:hover {
@@ -36,8 +36,9 @@ const Figure = styled.div`
         justify-content: center;
         align-items: center;
         transition: background 300ms ease-in-out;
-        font-family: tahoma;
-        font-size: 20px;
+        font-family: courier;
+        font-size: 25px;
+        bottom: 0;
     }
 
     img {

@@ -10,7 +10,7 @@ import ender from '../../images/ender.jpeg'
 import warcraft from '../../images/warcraft.jpg'
 import xmen from '../../images/xmen.jpg'
 
-const MainContent = () => {
+const Gallery = () => {
     return(
         <>
             <Wrapper>
@@ -18,8 +18,8 @@ const MainContent = () => {
                 <Movie imageSrc={avatar} title='Avatar' />
                 <Movie imageSrc={band} title='Band Of Brothers' />
                 <Movie imageSrc={warcraft} title='Warcraft' />
-                <Movie imageSrc={xmen} title='X-men' />
-                <Movie imageSrc={ender} title={`Ender's game`} />
+                <Movie imageSrc={xmen} title='X-Men' />
+                <Movie imageSrc={ender} title={`Ender's Game`} />
             </Wrapper>
             {/* <Wrapper>
 
@@ -28,4 +28,4 @@ const MainContent = () => {
     )
 }
 
-export default MainContent
+export default Gallery

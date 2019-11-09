@@ -4,7 +4,7 @@ import { Wrapper } from './styles'
 const Footer = () => {
     return (
         <Wrapper>
-            kodflix copyrights 2019
+           <div>kodflix copyrights 2019</div> 
         </Wrapper>
     );
 }
