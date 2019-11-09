@@ -17,12 +17,13 @@ const MainContent = () => {
                 <Movie imageSrc={avengers}  title='Avengers'/>
                 <Movie imageSrc={avatar} title='Avatar' />
                 <Movie imageSrc={band} title='Band Of Brothers' />
-            </Wrapper>
-            <Wrapper>
                 <Movie imageSrc={warcraft} title='Warcraft' />
                 <Movie imageSrc={xmen} title='X-men' />
                 <Movie imageSrc={ender} title={`Ender's game`} />
             </Wrapper>
+            {/* <Wrapper>
+
+            </Wrapper> */}
         </>
     )
 }
