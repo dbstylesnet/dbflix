@@ -11,6 +11,7 @@ const Wrapper = styled.header`
     color: white;
     font-family: verdana;
     font-variant: small-caps;
+    margin: 0 0 60px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .7);
 `
 
