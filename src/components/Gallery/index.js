@@ -21,9 +21,6 @@ const Gallery = () => {
                 <Movie imageSrc={xmen} title='X-Men' />
                 <Movie imageSrc={ender} title={`Ender's Game`} />
             </Wrapper>
-            {/* <Wrapper>
-
-            </Wrapper> */}
         </>
     )
 }

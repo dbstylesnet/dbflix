@@ -7,7 +7,7 @@ const Header = () => {
     <Wrapper className="App-header">
       <div>
           <img src={dbflixLogo} alt={dbflixLogo} />
-          <p>handy movie liberary</p>
+          <p>handy movie library</p>
         </div>
     </Wrapper>
    )
