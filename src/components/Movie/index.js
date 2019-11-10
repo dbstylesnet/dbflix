@@ -6,7 +6,7 @@ const Movie = ({ ...props }) => {
     return (
         <Figure>
             <Link to='/details'>
-                <label for="toggle-box" class="boxy">{props.title}</label>
+                <label>{props.title}</label>
                 <img src={props.imageSrc} alt={props.title} />
             </Link>
         </Figure>

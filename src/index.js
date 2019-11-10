@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './styles/index.css'
 import Kodflix from './pages/kodflix'
-import * as serviceWorker from './serviceWorker'
+// import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(<Kodflix />, document.getElementById('root'))
 

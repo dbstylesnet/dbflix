@@ -1,5 +1,4 @@
 import React from 'react'
-import { BrowserRouuter as Router, Route, Link } from 'react-router-dom'
 import { Wrapper } from './styles'
 import Movie from '../../components/Movie'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import AboutUs from '../components/AboutUs'
 import Gallery from '../components/Gallery'
 import Details from '../components/Details'

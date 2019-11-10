@@ -3,9 +3,6 @@ import styled from 'styled-components'
 const Figure = styled.div`
     overflow: hidden;
     position: relative;
-    // grid-gap
-    // display: flex;
-    // margin: 60px 30px 0;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     align-items: flex-start;
@@ -28,7 +25,7 @@ const Figure = styled.div`
     label {
         position: absolute;
         width: 100%;
-        height: 20%;
+        height: 15%;
         background: rgba(0, 0, 0, .5);
         color: white;
         display: flex;
