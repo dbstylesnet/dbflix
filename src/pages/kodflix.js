@@ -1,7 +1,8 @@
 import React from 'react'
-import { BrowserRouuter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import AboutUs from '../components/AboutUs'
 import Gallery from '../components/Gallery'
+import Details from '../components/Details'
 import { Wrapper } from '../styles/styles'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -9,12 +10,13 @@ import Footer from '../components/Footer'
 const Kodflix = () => {
     return (
         <Wrapper>
-            <Header />
             <Router> 
-                <Gallery />
-                <AboutUs />
+                <Header />
+                <Route exact component={Gallery} path='/' />
+                <Route component={AboutUs} path='/about' />
+                <Route component={Details} path='/details' />
+                <Footer />
             </Router>
-            <Footer />
         </Wrapper>
     ); 
 }
