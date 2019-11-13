@@ -13,12 +13,12 @@ const Gallery = () => {
     return(
         <>
             <Wrapper>
-                <Movie imageSrc={avengers}  title='Avengers'/>
-                <Movie imageSrc={avatar} title='Avatar' />
-                <Movie imageSrc={band} title='Band Of Brothers' />
-                <Movie imageSrc={warcraft} title='Warcraft' />
-                <Movie imageSrc={xmen} title='X-Men' />
-                <Movie imageSrc={ender} title={`Ender's Game`} />
+                <Movie imageSrc={avengers} id='avengers' title='Avengers'/>
+                <Movie imageSrc={avatar} id='avatar' title='Avatar' />
+                <Movie imageSrc={band} id='band' title='Band Of Brothers' />
+                <Movie imageSrc={warcraft} id='warcraft' title='Warcraft' />
+                <Movie imageSrc={xmen} id='xmen' title='X-Men' />
+                <Movie imageSrc={ender} id='ender' title={`Ender's Game`} />
             </Wrapper>
         </>
     )

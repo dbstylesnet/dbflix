@@ -14,7 +14,7 @@ const Kodflix = () => {
                 <Header />
                 <Route exact component={Gallery} path='/' />
                 <Route component={AboutUs} path='/about' />
-                <Route component={Details} path='/details' />
+                <Route component={Details} path='/:d' />
                 <Footer />
             </Router>
         </Wrapper>
