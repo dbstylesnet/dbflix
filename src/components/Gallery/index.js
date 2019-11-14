@@ -2,6 +2,7 @@ import React from 'react'
 import { Wrapper } from './styles'
 import Movie from '../../components/Movie'
 
+import gallery from '../../config/index'
 import avengers from '../../images/avengers.jpeg'
 import avatar from '../../images/avatar.jpg'
 import band from '../../images/band.jpeg'
@@ -11,7 +12,7 @@ import xmen from '../../images/xmen.jpg'
 
 const Gallery = () => {
     return(
-        <>
+        <>{gallery.movies.avatar.src}
             <Wrapper>
                 <Movie imageSrc={avengers}  title='Avengers'/>
                 <Movie imageSrc={avatar} title='Avatar' />

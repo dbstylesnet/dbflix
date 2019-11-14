@@ -34,7 +34,7 @@ const Figure = styled.div`
         align-items: center;
         transition: background 300ms ease-in-out;
         font-family: courier;
-        font-size: 25px;
+        font-size: 18px;
         bottom: 0;
     }
 
