@@ -43,13 +43,6 @@ const Figure = styled.div`
         height: 100%;
         width: auto;
     }
-
-    @media only screen and (max-width: 992px) {
-        justify-content: center;
-        label {
-            max-width: 400px;
-        }
-    }
 `
 
 export { Figure }
