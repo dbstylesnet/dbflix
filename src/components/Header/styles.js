@@ -21,9 +21,57 @@ const Wrapper = styled.header`
         width: 100%;
         a {
             display:flex;
+            justify-content: center;
         }
         span {
             align-self: flex-end;
+            position: relative;
+        }
+    }
+    .menu {
+        .menuTrigger {
+            color: #333;
+            div {
+                width: 60px;
+                height: 13px;
+                margin: 5px auto;
+                cursor: pointer;
+                span {
+                    height: 1px;
+                    background: white;
+                    display: block;
+                    position: relative;
+                    top: 4px;
+                    &:after, &:before {
+                        height: 1px;
+                        background: white;
+                        display: block;
+                        position: absolute;
+                        bottom: 4px;
+                        left: 0;
+                        width: 60px;
+                        content: '';
+                    }
+                    &:before {
+                        bottom: -4px;
+                    }
+                }
+            }
+        }
+        // background: lightgreen;
+        width: 100px;
+        height: 20px;
+        transition: all .3s ease-in-out;
+        box-shadow: 0px 0px 3px #333;
+        position: absolute;
+        float:right;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        overflow: hidden;
+        &.opened {
+            height: 50px;
+            transition: all .3s ease-in-out;
         }
     }
 `

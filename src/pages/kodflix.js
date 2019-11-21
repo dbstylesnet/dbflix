@@ -6,15 +6,17 @@ import Details from '../components/Details'
 import { Wrapper } from '../styles/styles'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Counter from '../components/Counter'
 
 const Kodflix = () => {
     return (
         <Wrapper>
             <Router> 
-                <Header />
+                <Header msg={'Hello'} />
                 <Route exact component={Gallery} path='/' />
                 <Route component={AboutUs} path='/about' />
                 <Route component={Details} path='/:d' />
+                <Counter msg={'Hello'} />
                 <Footer />
             </Router>
         </Wrapper>
