@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Wrapper } from './styles'
+import Counter from '../../components/Counter'
 
 class Details extends Component {
     constructor() {
@@ -22,14 +23,14 @@ class Details extends Component {
 
     runOnClick() {
         this.setState({
-            welcomeMessage: 'klupa',
+            welcomeMessage: 'Pressed Up',
             points: this.state.points + 1,
         })
     } 
 
     runLowClick() {
         this.setState({
-            welcomeMessage: 'lowdupa',
+            welcomeMessage: 'Pressed Down',
             points: this.state.points - 1,
         })
     } 
@@ -44,9 +45,10 @@ class Details extends Component {
                     <div> here goes points {this.state.points} </div>
                     <button onClick={() => this.runOnClick()}>Button here</button><br />
                     <button onClick={() => this.runLowClick()}>Button low </button><br />
-                    Description goes here. Description goes here. Description goes here. Description goes here. <br />
-                    Description goes here. Description goes here. Description goes here. Description goes here. <br />
-                    Description goes here. Description goes here. Description goes here. Description goes here. <br />
+                    Description goes here. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <Counter msg={'Hello'} />
                 </div> 
             </Wrapper>
         )
