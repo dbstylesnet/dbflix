@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Wrapper } from './styles'
 import { Link } from 'react-router-dom'
 import dbflixLogo from '../../images/dbflixLogo.svg'
 
-const Header = () => {
-    return(
+function Header() {
+    const [isOpen, setIsOpen] = useState(false)
+
+    function foldSwitch() { 
+        setIsOpen(!isOpen)
+    };
+
+    return (
         <Wrapper className="App-header">
             <div className="logo">
                 <Link to='/'>
@@ -12,7 +18,12 @@ const Header = () => {
                     <p>handy movie library</p>
                 </Link>
                 <span>
-                    <Link to='/about'>about us</Link>
+                    <div className={`menu ${isOpen ? 'opened' : ''}`}>
+                        <div className='menuTrigger' onClick={foldSwitch}>
+                            <div><span></span></div>
+                        </div>
+                        <Link to='/about'>about us</Link>
+                    </div>
                 </span>
             </div>
         </Wrapper>
