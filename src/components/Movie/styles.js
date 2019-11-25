@@ -4,13 +4,14 @@ const Figure = styled.div`
     overflow: hidden;
     position: relative;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.3s cubic-bezier(.47,0,.74,.71);
+    
     align-items: flex-start;
     &:hover {
         cursor: pointer;  
         transform: scale(1.15, 1.15);
         box-shadow: 0px 0px 4px rgba(0,0,0,0.3);
-        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.3s cubic-bezier(.47,0,.74,.71);
     }
     &:hover label {
         background: rgba(0, 0, 0, .7);  
