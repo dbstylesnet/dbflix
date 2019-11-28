@@ -11,7 +11,7 @@ function Header() {
     };
 
     return (
-        <Wrapper className="App-header">
+        <Wrapper>
             <div className="logo">
                 <Link to='/'>
                     <img src={dbflixLogo} alt={dbflixLogo} />

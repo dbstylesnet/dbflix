@@ -22,7 +22,7 @@ class HeaderClass extends Component {
     render() {
         const { msg } = this.props
         return (
-            <Wrapper className="App-header">
+            <Wrapper>
                 <div className="logo">
                     <Link to='/'>
                         <img src={dbflixLogo} alt={dbflixLogo} />
