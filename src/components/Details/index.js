@@ -2,7 +2,7 @@ import React from 'react'
 import { Wrapper } from './styles'
 import GalleryData from '../../config/index'
 
-const DetailsHooks = (props) => {
+const Details = (props) => {
 
     let movieId = props.match.params.movieId
     let movie = GalleryData().find((movie) => movie.id === movieId) 
@@ -17,4 +17,4 @@ const DetailsHooks = (props) => {
     )
 }
 
-export default DetailsHooks
+export default Details
