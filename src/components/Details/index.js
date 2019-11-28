@@ -1,18 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Wrapper } from './styles'
+import { useParams } from 'react-router-dom'
 import GalleryData from '../../config/index'
 
-const Details = (props) => {
+const Details = () => {
 
-    let movieId = props.match.params.movieId
-    let movie = GalleryData().find((movie) => movie.id === movieId) 
- 
+    const [movie, setMovie] = useState({})
+    const { movieId } = useParams()
+
+
+    useEffect(() => {
+        let movie = GalleryData().find((movie) => movie.id === movieId)
+        setMovie(movie);
+        }, []
+    );
+
     return (
         <Wrapper>
-            <div>
+           {movie.id ? <div>
                 Details of the movie:<br /><br />
-                {movie.id}<br /><br />
-            </div> 
+                {movie.id}
+                <br /><br />
+            </div> : <div></div>}
         </Wrapper>
     )
 }
