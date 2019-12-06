@@ -16,12 +16,13 @@ const Details = (props) => {
     );
 
     return (
-        <Wrapper>
+        <Wrapper className='wrapper'>
            {movie.id ? <div>
-                Details of the movie:<br /><br />
-                {movie.title}<br /><br />
-                {movie.description}<br /><br />
-                <img src={movie.imageSrc} alt={movie.title} />
+                Details of the movie {movie.title}<br /><br />
+                <div className='detailsContainer'> 
+                    <div>{movie.description}<br /><br /></div>
+                    <div><img src={movie.imageSrc} alt={movie.title} /></div>
+                </div>
                 <br /><br />
             </div> : <div></div>}
         </Wrapper>

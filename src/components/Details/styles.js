@@ -9,11 +9,31 @@ const Wrapper = styled.div`
     justify-content: flex-start;
     align-items: center;
     min-height: 25vh;
-    div {
+    &.wrapper {
         max-width: 80vw;
         margin: 0 10vw;
-        text-indent: 30px;
         text-align: left;
+    }
+    div.detailsContainer {
+        display: flex;
+        div {
+            margin: 0 10px;
+            flex: 1;
+            img {
+                width: auto;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+    @media only screen and (max-width: 400px) {
+        div.detailsContainer {
+            display: flex;
+            flex-direction: column;
+            div {
+                flex: 1;
+            }
+        }
     }
 `
 
