@@ -19,9 +19,9 @@ const Details = (props) => {
         <Wrapper>
            {movie.id ? <div>
                 Details of the movie:<br /><br />
-                {movie.title}<br />
-                {movie.description}
-                {movie.title}
+                {movie.title}<br /><br />
+                {movie.description}<br /><br />
+                <img src={movie.imageSrc} alt={movie.title} />
                 <br /><br />
             </div> : <div></div>}
         </Wrapper>
