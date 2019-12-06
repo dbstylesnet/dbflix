@@ -3,11 +3,11 @@ import { Wrapper } from './styles'
 import { useParams } from 'react-router-dom'
 import GalleryData from '../../config/index'
 
-const Details = () => {
+const Details = (props) => {
 
     const [movie, setMovie] = useState({})
     const { movieId } = useParams()
-
+    // const movieId = props.match.params.movieId
 
     useEffect(() => {
         let movie = GalleryData().find((movie) => movie.id === movieId)
@@ -19,7 +19,9 @@ const Details = () => {
         <Wrapper>
            {movie.id ? <div>
                 Details of the movie:<br /><br />
-                {movie.id}
+                {movie.title}<br />
+                {movie.description}
+                {movie.title}
                 <br /><br />
             </div> : <div></div>}
         </Wrapper>
