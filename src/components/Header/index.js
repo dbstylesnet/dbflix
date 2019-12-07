@@ -1,18 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Wrapper } from './styles'
 import { Link } from 'react-router-dom'
 import dbflixLogo from '../../images/dbflixLogo.svg'
 
-const Header = () => {
-    return(
-        <Wrapper className="App-header">
+function Header() {
+    const [isOpen, setIsOpen] = useState(false)
+
+    function foldSwitch() { 
+        setIsOpen(!isOpen)
+    };
+
+    return (
+        <Wrapper>
             <div className="logo">
                 <Link to='/'>
                     <img src={dbflixLogo} alt={dbflixLogo} />
                     <p>handy movie library</p>
                 </Link>
                 <span>
-                    <Link to='/about'>about us</Link>
+                    <div className={`menu ${isOpen ? 'opened' : ''}`}>
+                        <div className='menuTrigger' onClick={foldSwitch}>
+                            <div><span></span></div>
+                        </div>
+                        <Link to='/about'>about us</Link>
+                    </div>
                 </span>
             </div>
         </Wrapper>

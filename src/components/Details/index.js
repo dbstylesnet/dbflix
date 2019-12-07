@@ -1,56 +1,32 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Wrapper } from './styles'
+import { useParams, Redirect } from 'react-router-dom'
+import GalleryData from '../../config/index'
 
-class Details extends Component {
-    constructor() {
-        super();
-        this.state = {
-            welcomeMessage: 'Hello, this will be the details page for each Movie & TV show :)',
-            points: 0,
-        }
-    }
+const Details = (props) => {
 
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                welcomeMessage: 'Coming soon! :)',
-                points: this.state.points + 1000,
+    const [movie, setMovie] = useState({})
+    const { movieId } = useParams()
+    // const movieId = props.match.params.movieId
 
-            })
-        }, 3000);
-    }
+    useEffect(() => {
+        let movie = GalleryData().find((movie) => movie.id === movieId)
+        setMovie(movie);
+        }, []
+    );
 
-    runOnClick() {
-        this.setState({
-            welcomeMessage: 'klupa',
-            points: this.state.points + 1,
-        })
-    } 
-
-    runLowClick() {
-        this.setState({
-            welcomeMessage: 'lowdupa',
-            points: this.state.points - 1,
-        })
-    } 
-
-
-    render() {
-        return(
-            <Wrapper>
-                <div>
-                    Details of the movie:<br />
-                    {this.state.welcomeMessage}<br />
-                    <div> here goes points {this.state.points} </div>
-                    <button onClick={() => this.runOnClick()}>Button here</button><br />
-                    <button onClick={() => this.runLowClick()}>Button low </button><br />
-                    Description goes here. Description goes here. Description goes here. Description goes here. <br />
-                    Description goes here. Description goes here. Description goes here. Description goes here. <br />
-                    Description goes here. Description goes here. Description goes here. Description goes here. <br />
-                </div> 
-            </Wrapper>
-        )
-    }
+    return (
+        <Wrapper className='wrapper'>
+           {movie ? <div>
+                Details of the movie {movie.title}<br /><br />
+                <div className='detailsContainer'> 
+                    <div>{movie.description}<br /><br /></div>
+                    <div><img src={movie.imageSrc} alt={movie.title} /></div>
+                </div>
+                <br /><br />
+            </div> : movie === undefined ? <Redirect to='/not-found' /> : <div>nie</div> }
+        </Wrapper>
+    )
 }
 
 export default Details
