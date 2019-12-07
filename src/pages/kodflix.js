@@ -13,14 +13,14 @@ const Kodflix = () => {
     return (
         <Wrapper>
             <Router>
-                {/* <Switch> */}
                 <Header />
+                <Switch>
                 <Route exact component={Gallery} path='/' />
+                <Route component={NotFound} path='/not-found' />
                 <Route component={AboutUs} path='/about' />
                 <Route component={Details} path='/:movieId' />
-                {/* <Route render={ () => <h1>404 Error</h1> }/> */}
+                </Switch>
                 <Footer />
-                {/* </Switch> */}
             </Router>
         </Wrapper>
     ); 

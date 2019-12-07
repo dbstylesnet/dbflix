@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Wrapper } from './styles'
-import { useParams } from 'react-router-dom'
+import { useParams, Redirect } from 'react-router-dom'
 import GalleryData from '../../config/index'
 
 const Details = (props) => {
@@ -17,14 +17,14 @@ const Details = (props) => {
 
     return (
         <Wrapper className='wrapper'>
-           {movie.id ? <div>
+           {movie ? <div>
                 Details of the movie {movie.title}<br /><br />
                 <div className='detailsContainer'> 
                     <div>{movie.description}<br /><br /></div>
                     <div><img src={movie.imageSrc} alt={movie.title} /></div>
                 </div>
                 <br /><br />
-            </div> : <div></div>}
+            </div> : movie === undefined ? <Redirect to='/not-found' /> : <div>nie</div> }
         </Wrapper>
     )
 }
