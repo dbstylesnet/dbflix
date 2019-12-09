@@ -24,7 +24,7 @@ const Wrapper = styled.header`
             justify-content: center;
         }
         span {
-            align-self: flex-end;
+            align-self: flex-en4d;
             position: relative;
         }
     }
