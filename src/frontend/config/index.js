@@ -1,7 +1,7 @@
-import avengers from '../images/avengers.jpeg'
+import avengers from '../images/avengers.jpg'
 import avatar from '../images/avatar.jpg'
-import band from '../images/band.jpeg'
-import ender from '../images/ender.jpeg'
+import band from '../images/band.jpg'
+import ender from '../images/ender.jpg'
 import warcraft from '../images/warcraft.jpg'
 import xmen from '../images/xmen.jpg'
 

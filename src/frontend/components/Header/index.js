@@ -12,7 +12,7 @@ function Header() {
 
     return (
         <Wrapper>
-            <div className="logo">
+            <div className="logo">  
                 <Link to='/'>
                     <img src={dbflixLogo} alt={dbflixLogo} />
                     <p>handy movie library</p>

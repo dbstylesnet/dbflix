@@ -1,19 +1,32 @@
 import React, { useState, useEffect } from 'react'
 import { Wrapper } from './styles'
 import { useParams, Redirect } from 'react-router-dom'
-import GalleryData from '../../config/index'
+// import GalleryData from '../../config/index'
+import APICalls from '../APICalls'
 
-const Details = (props) => {
 
+const Details = () => {
     const [movie, setMovie] = useState({})
-    const { movieId } = useParams()
-    // const movieId = props.match.params.movieId
+    const { movieId } = useParams() 
+    // const axios = require('axios')
+
+    // async function APICalls() {
+    //     try {
+    //         const wes = await axios('/rest/movies');
+    //         console.log(wes.data);
+    //     } 
+    //     catch (e) {
+    //         console.error(e)
+    //     } 
+    // }
 
     useEffect(() => {
-        let movie = GalleryData().find((movie) => movie.id === movieId)
-        setMovie(movie);
+        APICalls().then(dataAll => dataAll.data).then(data => data.find(movie => {
+            console.log(movie)
+            return movie.id === movieId}
+            )).then(data => setMovie(data))
         }, []
-    );
+    )
 
     return (
         <Wrapper className='wrapper'>

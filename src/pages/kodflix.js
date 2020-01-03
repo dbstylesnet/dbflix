@@ -23,7 +23,7 @@ const Kodflix = () => {
                 <Footer />
             </Router>
         </Wrapper>
-    ); 
+    );
 }
 
 export default Kodflix
