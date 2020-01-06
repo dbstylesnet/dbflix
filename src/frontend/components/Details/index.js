@@ -8,17 +8,6 @@ import APICalls from '../APICalls'
 const Details = () => {
     const [movie, setMovie] = useState({})
     const { movieId } = useParams() 
-    // const axios = require('axios')
-
-    // async function APICalls() {
-    //     try {
-    //         const wes = await axios('/rest/movies');
-    //         console.log(wes.data);
-    //     } 
-    //     catch (e) {
-    //         console.error(e)
-    //     } 
-    // }
 
     useEffect(() => {
         APICalls().then(dataAll => dataAll.data).then(data => data.find(movie => {
@@ -34,7 +23,7 @@ const Details = () => {
                 Details of the movie {movie.title}<br /><br />
                 <div className='detailsContainer'> 
                     <div>{movie.description}<br /><br /></div>
-                    <div><img src={movie.imageSrc} alt={movie.title} /></div>
+                    <div><img src={require(`/images/${movieId}.jpg`)} alt={movie.title} /></div>
                 </div>
                 <br /><br />
             </div> : movie === undefined ? <Redirect to='/not-found' /> : <div>nie</div> }
