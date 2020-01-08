@@ -23,7 +23,7 @@ const Details = () => {
                 Details of the movie {movie.title}<br /><br />
                 <div className='detailsContainer'> 
                     <div>{movie.description}<br /><br /></div>
-                    <div><img src={require(`/images/${movieId}.jpg`)} alt={movie.title} /></div>
+                    {/* <div><img src={require(`/src/images/${movieId}.jpg`)} alt={movie.title} /></div> */}
                 </div>
                 <br /><br />
             </div> : movie === undefined ? <Redirect to='/not-found' /> : <div>nie</div> }

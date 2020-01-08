@@ -14,12 +14,12 @@ app.get('/rest/movies', (req, res) => res.send(
 ))
 app.get('/test', (req, res) => res.send('routeTest 2'))
 
-app.use(express.static(path.join(__dirname, '/backend')))
+// app.use(express.static(path.join(__dirname, '/backend')))
 
-app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname,'/frontend/', 'index.html'))
-})
+// app.get('*', function(req, res) {
+//     res.sendFile(path.join(__dirname,'/frontend/', 'index.html'))
+// })
 
-const port = process.env.PORT || 3001
+// const port = process.env.PORT || 3002
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
