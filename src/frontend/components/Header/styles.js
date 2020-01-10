@@ -5,7 +5,7 @@ const Wrapper = styled.header`
     min-height: 10vh;
     font-size: calc(10px + 2vmin);
     color: white;
-    margin: 0 0 60px;
+    margin: 0 0 5px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .7);
     display: flex;
     p {
@@ -22,6 +22,7 @@ const Wrapper = styled.header`
         a {
             display:flex;
             justify-content: center;
+            margin: 0 0 0 -5px
         }
         span {
             align-self: flex-en4d;

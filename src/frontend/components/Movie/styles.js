@@ -5,13 +5,14 @@ const Figure = styled.div`
     position: relative;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
     transition: all 0.3s cubic-bezier(.47,0,.74,.71);
-    
+    z-index: 10;
     align-items: flex-start;
     &:hover {
         cursor: pointer;  
-        transform: scale(1.15, 1.15);
+        transform: scale(1.02, 1.02);
         box-shadow: 0px 0px 4px rgba(0,0,0,0.3);
         transition: all 0.3s cubic-bezier(.47,0,.74,.71);
+        z-index: 11;
     }
     &:hover label {
         background: rgba(0, 0, 0, .7);  
@@ -43,6 +44,13 @@ const Figure = styled.div`
         max-width: 100%;
         height: 100%;
         width: auto;
+    }
+
+
+    @media only screen and (max-width: 992px) {
+        &:hover {
+            cursor: pointer;  
+            transform: scale(1.01, 1.01);
     }
 `
 
