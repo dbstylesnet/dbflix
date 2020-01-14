@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.header`
-    background-color: #3e275d;
+    // background-color: #3e275d;
     min-height: 10vh;
     font-size: calc(10px + 2vmin);
     color: white;
@@ -39,7 +39,7 @@ const Wrapper = styled.header`
         position: absolute;
         float:right;
         top: 0;
-        right: 0;
+        right: -19px;
         z-index: 10;
         &.opened {
             width: 150px;

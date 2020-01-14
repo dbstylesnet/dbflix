@@ -40,10 +40,10 @@ app.get('*', function(req, res) {
 // const port = process.env.PORT || 3003
 
 
-app.use(express.static('build'));
-app.get('*', function(req, res) {
-    res.sendFile(__dirname + '/build/index.html');
-});
+// app.use(express.static('build'));
+// app.get('*', function(req, res) {
+//     res.sendFile(__dirname + '/build/index.html');
+// });
 
 
 
