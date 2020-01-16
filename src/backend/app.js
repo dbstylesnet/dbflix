@@ -6,6 +6,8 @@ const port = process.env.PORT || 3002
 // app.use(favicon(__dirname + '/build/favicon.ico'))
 // app.use(express.static(__dirname))
 // app.use(express.static(path.join(__dirname, 'build')))
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join('public')))
 // app.get('/ping', function(req, res) {
 //     return res.send('pong')
 // })
@@ -20,7 +22,7 @@ app.listen(port)
 
 
 app.get('/rest/movies', (req, res) => res.send(
-    [
+    [   
         {id: 'avengers', title: 'Avengers', description: 'Movie about Avengers. Movie about Avengers. Movie about Avengers'},
         {id: 'avatar', title: 'Avatar', description: 'Movie about Avatar. Movie about Avatar. Movie about Avatar. Movie about Avatar.'},
         {id: 'band', title: 'Band of Brothers', description: 'Movie about Banf od brothers. Movie about Banf od brothers. Movie about Banf od brothers '},
@@ -40,7 +42,7 @@ app.get('/test', (req, res) => res.send('routeTest 2'))
 // const port = process.env.PORT || 3003
 
 
-// app.use(express.static('build'));
+app.use(express.static('public'));
 // app.get('*', function(req, res) {
 //     res.sendFile(__dirname + '/build/index.html');
 // });
