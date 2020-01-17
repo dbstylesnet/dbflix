@@ -5,7 +5,7 @@ const Wrapper = styled.header`
     min-height: 10vh;
     font-size: calc(10px + 2vmin);
     color: white;
-    margin: 0 0 5px;
+    margin: 0 0 20px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .7);
     display: flex;
     p {
@@ -66,8 +66,8 @@ const Wrapper = styled.header`
         // box-shadow: 0px 0px 3px #333;
         position: absolute;
         float:right;
-        bottom: 0;
-        right: 0;
+        bottom: 3px;
+        right: -19px;
         z-index: 10;
         overflow: hidden;
         &.opened {

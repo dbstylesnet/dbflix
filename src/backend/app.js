@@ -12,9 +12,9 @@ app.use(express.static(path.join('public')))
 //     return res.send('pong')
 // })
 
-// app.get('*', function(req, res) {
-//     res.sendFile(path.join(__dirname, 'build', 'index.html'))
-// })
+app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
 
 app.listen(port)
 
@@ -42,7 +42,7 @@ app.get('/test', (req, res) => res.send('routeTest 2'))
 // const port = process.env.PORT || 3003
 
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
 // app.get('*', function(req, res) {
 //     res.sendFile(__dirname + '/build/index.html');
 // });
