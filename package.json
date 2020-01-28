@@ -17,9 +17,8 @@
   },
   "scripts": {
     "start-all": "npm-run-all -p start start-backend",
-    "start": "react-scripts start",
-    "start-heroku": "react-scripts build && start-backend",
-    "start-second": "react-scripts build && npm-run-all -p start start-backend",
+    "start-third": "react-scripts build && start-backend",
+    "start": "react-scripts build && npm-run-all -p start-pre start-backend",
     "start-pre": "react-scripts start",
     "start-backend": "nodemon ./src/backend/app.js",
     "build": "react-scripts build",
