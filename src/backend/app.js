@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const port = process.env.PORT || 3002
+const port = 3002
 
 // app.use(favicon(__dirname + '/build/favicon.ico'))
 // app.use(express.static(__dirname))
@@ -13,13 +13,10 @@ app.use(express.static(path.join('public')))
 // })
 
 app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+    res.sendFile(path.join('build', 'index.html'))
 })
 
 app.listen(port)
-
-
-
 
 app.get('/rest/movies', (req, res) => res.send(
     [   
@@ -31,6 +28,7 @@ app.get('/rest/movies', (req, res) => res.send(
         {id: 'xmen', title: 'X-Men', description: 'Movie about X-Men. Movie about X-Men. Movie about X-Men. Movie about X-Men. Movie about X-Men'},
     ]
 ))
+
 app.get('/test', (req, res) => res.send('routeTest 2'))
 
 // app.use(express.static(path.join(__dirname, '/backend')))
