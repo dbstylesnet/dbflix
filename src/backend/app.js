@@ -1,32 +1,7 @@
 const express = require('express')
-const app = express()
 const path = require('path')
+const app = express()4
 const port = process.env.PORT || 3002
-
-// app.use(favicon(__dirname + '/build/favicon.ico'))
-// app.use(express.static(__dirname))
-// app.use(express.static(path.join(__dirname, 'build')))
-app.use(express.static(path.join(__dirname, 'public')))
-app.use(express.static(path.join('public')))
-// app.get('/ping', function(req, res) {
-//     return res.send('pong')
-// })
-
-// app.get('*', function(req, res) {
-//     res.sendFile(path.join(__dirname, 'build', 'index.html'))
-// })
-
-
-    // // Serve any static files
-    // app.use(express.static(path.join(__dirname, '../../build')));
-    // // Handle React routing, return all requests to React app
-    // app.get('*', function (req, res) {
-    //     res.sendFile(path.join(__dirname, '../../build', 'index.html'));
-    // });
-
-// app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-
-
 
 app.get('/rest/movies', (req, res) => res.send(
     [   
@@ -38,24 +13,41 @@ app.get('/rest/movies', (req, res) => res.send(
         {id: 'xmen', title: 'X-Men', description: 'Movie about X-Men. Movie about X-Men. Movie about X-Men. Movie about X-Men. Movie about X-Men'},
     ]
 ))
-
+    
 app.get('/test', (req, res) => res.send('routeTest 2'))
+    
+// Serve any static files
+app.use(express.static(path.join(__dirname, '../../build')));
+// Handle React routing, return all requests to React app
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, '../../build', 'index.html'));
+});
+        
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+            
 
+// app.use(favicon(__dirname + '/build/favicon.ico'))
+// app.use(express.static(__dirname))
+// app.use(express.static(path.join(__dirname, 'build')))
+// app.use(express.static(path.join(__dirname, 'public')))
+// app.use(express.static(path.join('public')))
+// app.get('/ping', function(req, res) {
+//     return res.send('pong')
+// })
 
 // app.use(express.static(path.join(__dirname, '/backend')))
 
 
 // app.get('*', function(req, res) {
-//     res.sendFile(path.join(__dirname,'/frontend/', 'index.html'))
-// })
-
-// const port = process.env.PORT || 3003
-
-
-// app.use(express.static('public'));
-// app.get('*', function(req, res) {
-//     res.sendFile(__dirname + '/build/index.html');
-// });
-
+    //     res.sendFile(path.join(__dirname,'/frontend/', 'index.html'))
+    // })
+    
+    // const port = process.env.PORT || 3003
+    
+    
+    // app.use(express.static('public'));
+    // app.get('*', function(req, res) {
+        //     res.sendFile(__dirname + '/build/index.html');
+        // });
+        
 // app.listen(port, () => console.log(`Example app listening on port ${port}!`))

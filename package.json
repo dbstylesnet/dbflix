@@ -16,9 +16,9 @@
     "yarn-run-all": "^3.1.1"
   },
   "scripts": {
+    "start": "npm run _start-backend",
+    "postinstall": "react-scripts build",
     "start-all": "npm-run-all -p start _start-backend",
-    "start-third": "react-scripts build && start-backend",
-    "start": "npm run start-backend",
     "start-dev2": "react-scripts build && npm-run-all -p react-scripts start start-backend",
     "start-dev": "npm-run-all -p start-normal _start-backend-dev",
     "start-dev-db": "npm-run-all -p _start-db _start-frontend _start-backend",
