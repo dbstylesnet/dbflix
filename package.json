@@ -25,7 +25,7 @@
     "_start-frontend": "react-scripts start",
     "_start-backend": "node src/backend/app.js",
     "_start-backend-dev": "nodemon ./src/backend/app.js",
-    "start-normal": "reat-scripts start",
+    "start-normal": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
