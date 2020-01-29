@@ -18,9 +18,11 @@
   "scripts": {
     "start-all": "npm-run-all -p start start-backend",
     "start-third": "react-scripts build && start-backend",
-    "start": "react-scripts build && npm-run-all -p start-pre start-backend",
+    "start": "npm run start-backend",
+    "start-dev2": "react-scripts build && npm-run-all -p react-scripts start start-backend",
+    "start-dev": "npm-run-all -p _start-db _start-frontend _start-backend",
     "start-pre": "react-scripts start",
-    "start-backend": "nodemon ./src/backend/app.js",
+    "start-backend": "node src/backend/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
