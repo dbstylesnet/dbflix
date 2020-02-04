@@ -6,9 +6,8 @@ const Wrapper = styled.div`
     font-size: 18px;
     margin: 60px 0 0 0;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    min-height: 25vh;
+    height: 100%;
     &.wrapper {
         max-width: 80vw;
         margin: 0 10vw;

@@ -6,7 +6,7 @@ const Figure = styled.div`
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
     transition: all 0.3s cubic-bezier(.47,0,.74,.71);
     z-index: 10;
-    align-items: flex-start;
+    background: black;
     &:hover {
         cursor: pointer;  
         transform: scale(1.02, 1.02);
@@ -42,8 +42,9 @@ const Figure = styled.div`
 
     img {
         max-width: 100%;
-        height: 100%;
+        height: auto;
         width: auto;
+        display: block;
     }
 
 
