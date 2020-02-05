@@ -9,17 +9,15 @@ const band = ['../../images/band.jpg']
 
 
 const Gallery = () => {
-    const [bgLink, setBgLink] = useState(band)
-    const changeBackground = () => {
-        setBgLink(av)
-      }
-    // setBgLink = () => {
-
-    // } 
-
+    const [bgLink, setBgLink] = useState(av)
+    const [opaImg, setOpaImg] = useState(1)
+    const tadam = (bg) => {
+        setOpaImg(0)
+        setBgLink(bg)
+    }
     return(
         <>
-            <HeroBG imgSrc={bgLink} altText='Hero background' />
+            <HeroBG opaImg={opaImg} imgSrc={bgLink} altText='Hero background' />
             <Wrapper>
                 {GalleryData().map(cover => {
                     return (
@@ -28,7 +26,7 @@ const Gallery = () => {
                             imageSrc={cover.imageSrc} 
                             id={cover.id} 
                             title={cover.title} 
-                            setBg={changeBackground}
+                            tadam={tadam}
                             />
                     );
                 })}
