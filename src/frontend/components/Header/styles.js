@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.header`
-    // background-color: #3e275d;
     min-height: 10vh;
     font-size: calc(10px + 2vmin);
     color: white;
-    margin: 0 0 20px;
+    margin: 0 0 0px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .7);
     display: flex;
     p {

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
+  position: relative;
+  overflow: hidden;
   font-family: courier;
   background: linear-gradient(-14deg, purple, black);
   a { 
