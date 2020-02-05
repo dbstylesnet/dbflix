@@ -7,6 +7,7 @@ const Movie = (props) => {
         <Figure>
             <Link to={`/${props.id}`}>
                 <div onMouseOver={() => props.tadam(props.imageSrc)}
+                    onMouseLeave={() => props.tadam(false, 0)}
                 >
                     <label>{props.title}</label>
                     <img src={props.imageSrc} alt={props.title} />

@@ -3,7 +3,7 @@ import { Wrapper } from './styles'
 
 const HeroBG = ({opaImg, imgSrc, altText}) => {
     return (
-        <Wrapper>
+        <Wrapper opaImg={opaImg}>
              <img src={imgSrc} alt={altText} />
         </Wrapper>
     );

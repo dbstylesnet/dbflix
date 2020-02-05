@@ -18,7 +18,9 @@ const Gallery = () => {
     return(
         <>
             <HeroBG opaImg={opaImg} imgSrc={bgLink} altText='Hero background' />
+            
             <Wrapper>
+            <div>{opaImg}</div>
                 {GalleryData().map(cover => {
                     return (
                         <Movie 

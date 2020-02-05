@@ -1,10 +1,11 @@
+import React from 'react'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
+const Wrapper = styled(({ opaImg, ...props }) => <div {...props} />)`
     position: relative;
     z-index: 0;
     img {
-        opacity: 0.3;
+        opacity: 0;
         position: absolute;
         width: 100%;
         top: 0px;
@@ -18,11 +19,11 @@ const Wrapper = styled.div`
 
     @keyframes example {
         from {
-            opacity: 0;
+            opacity: ${props => props.opaImg};
             top: -150px;
         }
         to { 
-            opacity: 0.3;
+            opacity: ${props => props.opaImg};
             top: 0px; 
         }
       }
