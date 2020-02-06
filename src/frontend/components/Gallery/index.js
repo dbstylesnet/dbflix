@@ -1,15 +1,13 @@
-import React , { useState } from 'react'
+import React , { useState, useEffect } from 'react'
 import { Wrapper } from './styles'
 import HeroBG from '../../components/HeroBG'
 import Movie from '../../components/Movie'
-import GalleryData from '../../config/index'
 import APICalls from '../../components/APICalls'
 
-const av = ['../../images/avatar.jpg']
-
 const Gallery = () => {
-    const [bgLink, setBgLink] = useState(av)
+    const [bgLink, setBgLink] = useState(`../../images/avengers.jpg`)
     const [opaImg, setOpaImg] = useState(0)
+    const [allMovies, setAllMovies] = useState([])
 
     const movieIn = (bgImage) => {
         if (bgImage === false) { 
@@ -19,7 +17,14 @@ const Gallery = () => {
             setOpaImg(.3)
         }
     }
-    
+
+    useEffect(() => {
+        APICalls()
+            .then(dataAll => dataAll.data)
+            .then(data => setAllMovies(data))
+        }, []
+    )
+
     return(
         <>
             <HeroBG 
@@ -28,16 +33,15 @@ const Gallery = () => {
                 altText='Hero background' 
                 />
             <Wrapper>
-                {GalleryData().map(cover => {
+                {allMovies.map(movie => {
                     return (
-                        <Movie 
-                            key={cover.id} 
-                            imageSrc={cover.imageSrc} 
-                            id={cover.id} 
-                            title={cover.title} 
+                        <Movie
+                            key={movie.id}
+                            id={movie.id} 
+                            title={movie.title}
                             movieIn={movieIn}
                             />
-                    );
+                    )
                 })}
             </Wrapper>
         </>

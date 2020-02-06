@@ -19,13 +19,15 @@ const Details = () => {
     return (
         <Wrapper className='wrapper'>
            {movie ? <div>
-                Details of the movie {movie.title}<br /><br />
+                <br /><br />
+                    <h3>{movie.title}</h3>
+                <br /><br />
                 <div className='detailsContainer'> 
                     <div>{movie.description}<br /><br /></div>
                     <div><img src={require(`../../images/${movieId}.jpg`)} alt={movie.title} /></div>
                 </div>
                 <br /><br />
-            </div> : movie === undefined ? <Redirect to='/not-found' /> : <div>nie</div> }
+            </div> : movie === undefined ? <Redirect to='/not-found' /> : '' }
         </Wrapper>
     )
 }

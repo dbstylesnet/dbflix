@@ -7,11 +7,11 @@ const Movie = (props) => {
         <Figure>
             <Link to={`/${props.id}`}>
                 <div 
-                    onMouseOver={() => props.movieIn(props.imageSrc)}
+                    onMouseOver={() => props.movieIn(`../../images/${props.id}.jpg`)}
                     onMouseLeave={() => props.movieIn(false)}
                     >
                     <label>{props.title}</label>
-                    <img src={props.imageSrc} alt={props.title} />
+                    <img src={require(`../../images/${props.id}.jpg`)} alt={props.title} />
                 </div>
             </Link>
         </Figure>
