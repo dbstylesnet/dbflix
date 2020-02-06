@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Wrapper } from './styles'
 import { useParams, Redirect } from 'react-router-dom'
-// import GalleryData from '../../config/index'
+import Loading from '../Loading'
 import APICalls from '../APICalls'
 
 
@@ -19,14 +19,7 @@ const Details = () => {
 
     return (
         <Wrapper className='wrapper'>
-           {movie ? <div>
-                Details of the movie {movie.title}<br /><br />
-                <div className='detailsContainer'> 
-                    <div>{movie.description}<br /><br /></div>
-                    <div><img src={require(`../../images/${movieId}.jpg`)} alt={movie.title} /></div>
-                </div>
-                <br /><br />
-            </div> : movie === undefined ? <Redirect to='/not-found' /> : <div>nie</div> }
+           {movie ? <Loading /> : movie === undefined ? <Redirect to='/not-found' /> : <Loading /> }
         </Wrapper>
     )
 }
