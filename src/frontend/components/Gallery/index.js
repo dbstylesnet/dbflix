@@ -3,26 +3,30 @@ import { Wrapper } from './styles'
 import HeroBG from '../../components/HeroBG'
 import Movie from '../../components/Movie'
 import GalleryData from '../../config/index'
+import APICalls from '../../components/APICalls'
 
 const av = ['../../images/avatar.jpg']
-const band = ['../../images/band.jpg']
-
 
 const Gallery = () => {
     const [bgLink, setBgLink] = useState(av)
     const [opaImg, setOpaImg] = useState(0)
 
-    const movieIn = (bg) => {
-        setOpaImg(.3)
-        setBgLink(bg)
-    }
-    const movieOut = () => {
-        setOpaImg(0)
+    const movieIn = (bgImage) => {
+        if (bgImage === false) { 
+            setOpaImg(0) 
+        } else {
+            setBgLink(bgImage)
+            setOpaImg(.3)
+        }
     }
     
     return(
         <>
-            <HeroBG opaImg={opaImg} imgSrc={bgLink} altText='Hero background' />
+            <HeroBG 
+                opaImg={opaImg} 
+                imgSrc={bgLink} 
+                altText='Hero background' 
+                />
             <Wrapper>
                 {GalleryData().map(cover => {
                     return (
@@ -32,7 +36,6 @@ const Gallery = () => {
                             id={cover.id} 
                             title={cover.title} 
                             movieIn={movieIn}
-                            movieOut={movieOut}
                             />
                     );
                 })}
