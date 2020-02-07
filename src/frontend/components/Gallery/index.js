@@ -1,36 +1,47 @@
-import React , { useState } from 'react'
+import React , { useState, useEffect } from 'react'
 import { Wrapper } from './styles'
 import HeroBG from '../../components/HeroBG'
 import Movie from '../../components/Movie'
-import GalleryData from '../../config/index'
-
-const av = ['../../images/avatar.jpg']
-const band = ['../../images/band.jpg']
-
+import APICalls from '../../components/APICalls'
 
 const Gallery = () => {
-    const [bgLink, setBgLink] = useState(av)
-    const [opaImg, setOpaImg] = useState(1)
-    const tadam = (bg) => {
-        setOpaImg(0)
-        setBgLink(bg)
+    const [bgLink, setBgLink] = useState(`../../images/avengers.jpg`)
+    const [opaImg, setOpaImg] = useState(0)
+    const [allMovies, setAllMovies] = useState([])
+
+    const movieIn = (bgImage) => {
+        if (bgImage === false) { 
+            setOpaImg(0) 
+        } else {
+            setBgLink(bgImage)
+            setOpaImg(.3)
+        }
     }
+
+    useEffect(() => {
+        APICalls()
+            .then(dataAll => dataAll.data)
+            .then(data => setAllMovies(data))
+        }, []
+    )
+
     return(
         <>
-            <HeroBG opaImg={opaImg} imgSrc={bgLink} altText='Hero background' />
-            
+            <HeroBG 
+                opaImg={opaImg} 
+                imgSrc={bgLink} 
+                altText='Hero background' 
+                />
             <Wrapper>
-            <div>{opaImg}</div>
-                {GalleryData().map(cover => {
+                {allMovies.map(movie => {
                     return (
-                        <Movie 
-                            key={cover.id} 
-                            imageSrc={cover.imageSrc} 
-                            id={cover.id} 
-                            title={cover.title} 
-                            tadam={tadam}
+                        <Movie
+                            key={movie.id}
+                            id={movie.id} 
+                            title={movie.title}
+                            movieIn={movieIn}
                             />
-                    );
+                    )
                 })}
             </Wrapper>
         </>

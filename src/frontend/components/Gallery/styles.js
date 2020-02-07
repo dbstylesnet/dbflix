@@ -14,9 +14,4 @@ font-size: 30px;
     }
 `
 
-
-const ImgBG = styled.img`
-
-`
-
-export { Wrapper, ImgBG }
+export { Wrapper}

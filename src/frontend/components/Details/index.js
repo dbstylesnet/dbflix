@@ -10,16 +10,25 @@ const Details = () => {
     const { movieId } = useParams() 
 
     useEffect(() => {
-        APICalls().then(dataAll => dataAll.data).then(data => data.find(movie => {
-            console.log(movie)
-            return movie.id === movieId}
-            )).then(data => setMovie(data))
+        APICalls()
+            .then(dataAll => dataAll.data)
+            .then(data => data.find(movie => movie.id === movieId))
+            .then(data => setMovie(data))
         }, []
     )
 
     return (
         <Wrapper className='wrapper'>
-           {movie ? <Loading /> : movie === undefined ? <Redirect to='/not-found' /> : <Loading /> }
+           {movie ? <div>
+                <br /><br />
+                    <h3>{movie.title}</h3>
+                <br /><br />
+                <div className='detailsContainer'> 
+                    <div>{movie.description}<br /><br /></div>
+                    <div><img src={require(`../../images/${movieId}.jpg`)} alt={movie.title} /></div>
+                </div>
+                <br /><br />
+            </div> : movie === undefined ? <Redirect to='/not-found' /> : <Loading /> }
         </Wrapper>
     )
 }

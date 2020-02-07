@@ -4,7 +4,7 @@ import { Wrapper } from './styles'
 const Loading = () => {
     return(
         <Wrapper>
-            Loading
+            <div></div>
         </Wrapper>  
     )
 }
