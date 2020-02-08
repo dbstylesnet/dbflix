@@ -3,6 +3,7 @@ import { Wrapper } from './styles'
 import HeroBG from '../../components/HeroBG'
 import Movie from '../../components/Movie'
 import APICalls from '../../components/APICalls'
+import Loading from '../../components/Loading'
 
 const Gallery = () => {
     const [bgLink, setBgLink] = useState(`../../images/avengers.jpg`)
@@ -27,6 +28,7 @@ const Gallery = () => {
 
     return(
         <>
+            {/* <Loading /> */}
             <HeroBG 
                 opaImg={opaImg} 
                 imgSrc={bgLink} 
