@@ -39,6 +39,7 @@ const Details = () => {
                     ? <Redirect to='/not-found' /> 
                     : ''
             }
+            {/* {movie.loading ? movie.loading: ''} */}
         </Wrapper>
     )
 }
