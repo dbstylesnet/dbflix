@@ -18,6 +18,8 @@ const Wrapper = styled.div`
         div {
             margin: 0 10px;
             flex: 1;
+            text-align: left;  
+            line-height: 25px;
             img {
                 width: auto;
                 max-width: 100%;
@@ -25,12 +27,14 @@ const Wrapper = styled.div`
             }
         }
     }
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 768px) {
         div.detailsContainer {
             display: flex;
             flex-direction: column;
             div {
                 flex: 1;
+                line-height: 20px;
+                font-size: 15px;
             }
         }
     }
