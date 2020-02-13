@@ -9,9 +9,9 @@ font-size: 30px;
     max-width: 80vw;
     margin: 20px 10vw 0;
 
-    @media only screen and (max-width: 992px) {
-        flex-direction: column;
-    }
+    // @media only screen and (max-width: 992px) {
+    //     flex-direction: column;
+    // }
 `
 
 export { Wrapper}
