@@ -23,7 +23,7 @@ const Details = () => {
     return (
         <Wrapper className='wrapper'>
             {movie 
-                ? movie.loading 
+                ? movie.loading
                     ? movie.loading  
                     : <div>
                         <br /><br />
@@ -39,7 +39,6 @@ const Details = () => {
                     ? <Redirect to='/not-found' /> 
                     : ''
             }
-            {/* {movie.loading ? movie.loading: ''} */}
         </Wrapper>
     )
 }
