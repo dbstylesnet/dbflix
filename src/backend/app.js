@@ -1,9 +1,12 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+const db = require('./db')
 const port = process.env.PORT || 3002
 
-
+db.main().then( dbo => {
+    console.log(dbo)
+})
 app.get('/rest/movies', (req, res) => res.send(
     [   
         {id: 'avengers', title: 'Avengers', description: 'The grave course of events set in motion by Thanos, that wiped out half the universe and fractured the Avengers ranks, compels the remaining Avengers to take one final stand in Marvel Studios\' grand conclusion to twenty-two films - Avengers: Endgame.'},

@@ -6,7 +6,7 @@ const AboutUs = () => {
         <Wrapper>
             <div>
                 Hi there,<br />
-                This is showcase project to aim easy, simple and well structured, accessible on every device video movie library.
+                This project is simple and well structured, accessible on every device video movie library showcase project.
                 Solutions used:
                 <ul className='techList'>
                     <li><span className='cathegory'>JS:</span>

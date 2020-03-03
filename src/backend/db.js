@@ -35,6 +35,7 @@
 
 const MongoClient = require('mongodb').MongoClient
 const url = 'mongodb://localhost:27017/'
+
 const assert = require('assert');
 
 async function main() {
@@ -44,14 +45,14 @@ async function main() {
         db = client.db('dbflix')
         let dCollection = db.collection('movies')
     //    let result = await dCollection.find();   
-        let result = await dCollection.findOne({}, (err, result) => {
+        result = await dCollection.findOne({}, (err, result) => {
             // console.log('x3', err)
             if (err) throw err
-            console.log(result.id)
-            db.close()
+            console.log(result.title)
+            // db.close()
         })
-    let result = await dCollection.countDocuments();
-    return result.toArray();
+    // let result = await dCollection.countDocuments();
+    // return result.toArray();
     }
     catch(err){ console.error(err); } // catch any mongo error here
     finally{ client.close(); } // make sure to close your connection after
