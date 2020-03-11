@@ -6,17 +6,7 @@ const port = process.env.PORT || 3002
 
 
 // console.log(db.connect().toArray())
-db.dbConnect().then(dbo => {
 
-    app.get('/rest/movies', (req, res) => {
-        dbo.collection('movies').find({}).toArray((err, results) => {
-            if (err) throw err
-            console.log(results)
-            res.send(results)
-        })
-    })
-    
-})
 
 // app.get('/rest/movies', async (req, res) => {
 //     const dbo = await db.main();
@@ -58,11 +48,22 @@ app.get('/test', (req, res) => res.send('routeTest 2'))
     
 // Serve any static files
 app.use(express.static(path.join(__dirname, '../../build')));
-// Handle React routing, return all requests to React app
-app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, '../../build', 'index.html'));
-});
-        
+
+db.dbConnect().then(dbo => {
+    app.get('/rest/movies', (req, res) => {
+        dbo.collection('movies').find({}).toArray((err, results) => {
+            if (err) throw err
+            console.log(results)
+            res.send(results)
+        })
+    })
+
+    // Handle React routing, return all requests to React app   
+    app.get('*', function (req, res) {
+        res.sendFile(path.join(__dirname, '../../build', 'index.html'));
+    })
+})
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
             
 
