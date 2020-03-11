@@ -16,6 +16,10 @@ const Details = () => {
                 .then(dataAll => dataAll.data)
                 .then(data => data.find(movie => movie.id === movieId))
                 .then(data => setMovie(data))    
+            
+            // fetch(`/rest/movies/${movieId}`)
+            //     .then(response => response.json())
+            //     .then(movie => setMovie(movie))
         }, 500)
         }, []
     )
