@@ -21,29 +21,20 @@ const Gallery = () => {
     }
 
     useEffect(() => {
-        // setTimeout(() => {
-            // APICalls()
-            //     .then(dataAll => dataAll.data)
+        setTimeout(() => {
+            APICalls()
+                .then(dataAll => dataAll.data)
+                .then(data => setAllMovies(data))
+            }, 1000)
+            // fetch('/rest/movies')
+            //     .then(data => data.json())
             //     .then(data => setAllMovies(data))
-            // }, 1000)
-
-            fetch('/rest/movies')
-                // .then(data => console.log(data))
-                .then(data => data.json())
-                // .then(data => console.log(data))
-                .then(data => {
-                    // console.log(data)
-                    return setAllMovies(data)
-                })
-            }
-        //     , 1000)
-
-        // }, []
+            // }
+        }, []
     )
 
     return(
         <>
-            {/* <Loading /> */}
             {allMovies 
                 ? allMovies.loading 
                     ? allMovies.loading
