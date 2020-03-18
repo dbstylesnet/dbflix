@@ -6,12 +6,13 @@ https://dbflixx.herokuapp.com/
 App demonstrating Full-stack skills using modern UI solutions.
 
 Features:
-* React (classes, hooks),
-* Modern UI (flexbox, grid, transitions),
-* NodeJS (Back-end connection WiP),
+* React (hooks, classes),
+* Modern UI (styled-components, flexbox, grid, transitions),
+* NodeJS (MongoDB),
 
 
-### `yarn start-dev`
+#### `yarn start-dev`
 (Local response from NodeJs, no MongoBD integration)
 Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+[http://localhost:3000](http://localhost:3000) to view it in the browser.
