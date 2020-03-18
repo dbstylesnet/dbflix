@@ -26,6 +26,7 @@ const AboutUs = () => {
                     </li>
                     <li><span className='cathegory'>CSS:</span>
                         <ul>
+                            <li>Styled-components</li>
                             <li>Grid</li>
                             <li>Flexbox</li>
                         </ul>
