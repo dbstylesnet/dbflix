@@ -18,7 +18,7 @@ https://dbflixx.herokuapp.com/
 ### `yarn` command in the project folder
 Resolving packages
 
-### `yarn start-dev`
+### `yarn start-dev` command in project folder
 Runs the app in the development mode.<br />
 (Local response from NodeJs, no MongoBD integration)<br />
 
