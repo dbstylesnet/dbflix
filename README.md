@@ -23,4 +23,4 @@ Runs the app in the development mode.<br />
 
 #### Screenshot:
 
-![alt text](https://github.com/dbstylesnet/dbflix/blob/master/image.png?raw=true)
+![alt text](https://github.com/dbstylesnet/dbflix/blob/master/screenshot.png)
