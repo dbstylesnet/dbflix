@@ -14,7 +14,7 @@ const Details = () => {
                 .then(dataAll => dataAll.data)
                 .then(data => data.find(movie => movie.id === movieId))
                 .then(data => setMovie(data))    
-            
+            // fetches on production
             // fetch(`/rest/movies/${movieId}`)
             //     .then(response => response.json())
             //     .then(movie => setMovie(movie))
