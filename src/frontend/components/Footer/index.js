@@ -6,7 +6,7 @@ const Footer = () => {
         <Wrapper>
            <div>kodflix copyrights 2019</div> 
         </Wrapper>
-    );
+    )
 }
 
 export default Footer

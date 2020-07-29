@@ -6,7 +6,7 @@ const HeroBG = ({opaImg, imgSrc, altText}) => {
         <Wrapper opaImg={opaImg}>
              <img src={imgSrc} alt={altText} />
         </Wrapper>
-    );
+    )
 }
 
 export default HeroBG

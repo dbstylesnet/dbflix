@@ -4,8 +4,6 @@ import { useParams, Redirect } from 'react-router-dom'
 import Loading from '../Loading'
 import APICalls from '../APICalls'
 
-
-
 const Details = () => {
     const [movie, setMovie] = useState({loading: <Loading />})
     const { movieId } = useParams() 

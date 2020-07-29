@@ -9,7 +9,8 @@ function Counter(props) {
     }
 
     return(
-        <><div>The current count is: {count} {props.msg}  </div>
+        <>
+            <div>The current count is: {count} {props.msg}</div>
             <button onClick={(e) => increaseCount(e)}>Increese</button>
             <button onClick={() => setCount(count - 1)}>Decreese</button>
         </>

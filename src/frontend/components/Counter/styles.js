@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.header`
-    // background-color: #3e275d;
     min-height: 10vh;
     font-size: calc(10px + 2vmin);
     color: white;

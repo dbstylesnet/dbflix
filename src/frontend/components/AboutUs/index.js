@@ -5,8 +5,8 @@ const AboutUs = () => {
     return (
         <Wrapper>
             <div>
-                Hi there,<br />
-                This project is simple and well structured, accessible on every device video movie library showcase project.
+                This project is a simple and well structured, accessible on every device video movie library, showcase project.
+                <br /><br />
                 Solutions used:
                 <ul className='techList'>
                     <li><span className='cathegory'>JS:</span>
@@ -35,7 +35,7 @@ const AboutUs = () => {
                 </ul>
             </div> 
         </Wrapper>
-    );
+    )
 }
 
 export default AboutUs

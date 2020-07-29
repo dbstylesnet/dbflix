@@ -9,7 +9,7 @@ const Movie = (props) => {
                 <div 
                     onMouseOver={() => props.movieIn(`../../images/${props.id}.jpg`)}
                     onMouseLeave={() => props.movieIn(false)}
-                    >
+                >
                     <label>{props.title}</label>
                     <img src={require(`../../images/${props.id}.jpg`)} alt={props.title} />
                 </div>

@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.header`
-    // background-color: #3e275d;
     background: rgba(0,0,0,.2);
     min-height: 10vh;
     font-size: calc(10px + 2vmin);
@@ -59,7 +58,6 @@ const Wrapper = styled.header`
                 }
             }
         }
-        // background: lightgreen;
         width: 100px;
         height: 20px;
         transition: all .3s ease-in-out;
