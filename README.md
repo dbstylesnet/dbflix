@@ -1,7 +1,7 @@
-# dbFLIX demo fullstack application
+# dbFlix demo fullstack application
 Utilising modern UI solutions.
 
-### Features:
+### Tech stack:
 * React (hooks, classes),
 * Modern UI (styled-components, flexbox, grid, transitions),
 * NodeJS
