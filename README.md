@@ -10,7 +10,6 @@ Utilising modern UI solutions.
 ## Production:
 https://dbflixx.herokuapp.com/
 
-![alt text](https://github.com/dbstylesnet/dbflix/blob/master/screenshot.png)
 
 
 ## Dev environment: 
