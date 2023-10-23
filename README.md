@@ -7,11 +7,6 @@ Utilising modern UI solutions.
 * NodeJS
 * MongoDB
 
-## Production:
-https://dbflixx.herokuapp.com/
-
-
-
 ## Dev environment: 
 
 ### `yarn` command in the project folder
