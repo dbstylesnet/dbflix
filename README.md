@@ -6,6 +6,9 @@ Utilising modern UI solutions.
 * Modern UI (styled-components, flexbox, grid, transitions),
 * NodeJS
 * MongoDB
+
+<img src="https://github.com/dbstylesnet/dbflix/blob/master/screenshot.png" alt="ProjectScreenshot" />
+
 <!-- 
 ## Dev environment: 
 
