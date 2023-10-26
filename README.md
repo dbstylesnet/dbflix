@@ -6,7 +6,7 @@ Utilising modern UI solutions.
 * Modern UI (styled-components, flexbox, grid, transitions),
 * NodeJS
 * MongoDB
-
+<!-- 
 ## Dev environment: 
 
 ### `yarn` command in the project folder
@@ -17,3 +17,4 @@ Runs the app in the development mode.<br />
 (Local response from NodeJs, no MongoBD integration)<br />
 
 [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-->
