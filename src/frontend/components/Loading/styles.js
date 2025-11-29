@@ -10,7 +10,7 @@ const Wrapper = styled.div`
     min-height: 700px;
     div {
         border: 16px solid #fff;
-        border-top: 16px solid #49aa48;
+        border-top: 16px solid #3d1a5e;
         align-self: center;
         border-radius: 50%;
         width: 120px;

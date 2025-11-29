@@ -9,7 +9,7 @@ const HeaderStateless = () => {
             <div className="logo">
                 <Link to='/'>
                     <img src={dbflixLogo} alt={dbflixLogo} />
-                    <p>handy movie library</p>
+                    <p>movie library</p>
                 </Link>
                 <span>
                     <Link to='/about'>about us</Link>

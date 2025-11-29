@@ -3,7 +3,24 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="162px" height="78px" viewBox="0 0 162 78" enable-background="new 0 0 162 78" xml:space="preserve">
-<rect x="5.735" y="16.267" fill-rule="evenodd" clip-rule="evenodd" fill="#49AA48" width="62.015" height="49.983"/>
+<defs>
+	<linearGradient id="purpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+		<stop offset="0%" style="stop-color:#3d1a5e;stop-opacity:1" />
+		<stop offset="100%" style="stop-color:#220022;stop-opacity:1" />
+	</linearGradient>
+	<filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+		<feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+		<feOffset dx="0" dy="2" result="offsetblur"/>
+		<feComponentTransfer>
+			<feFuncA type="linear" slope="0.3"/>
+		</feComponentTransfer>
+		<feMerge>
+			<feMergeNode/>
+			<feMergeNode in="SourceGraphic"/>
+		</feMerge>
+	</filter>
+</defs>
+<rect x="5.735" y="16.267" fill-rule="evenodd" clip-rule="evenodd" fill="url(#purpleGradient)" width="62.015" height="49.983" rx="4" ry="4" filter="url(#shadow)"/>
 <path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M4.306,10.754h62.015v49.983H4.306V10.754z"/>
 <path fill="#FFFFFF" d="M20.335,28.852l5.71,11.645l-0.081,0.04c-1.658-1.137-4.366-1.561-7.351-0.1
 	c-4.759,2.33-6.835,8.293-3.614,14.761c2.904,5.923,8.49,8.136,13.209,5.826c3.186-1.56,4.755-4.377,4.777-7.085l0.081-0.04
