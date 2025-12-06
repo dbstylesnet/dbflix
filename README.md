@@ -1,12 +1,3 @@
-# dbFlix demo fullstack application
-Utilising modern UI solutions.
-
-### Tech stack:
-* React (hooks, classes),
-* Modern UI (styled-components, flexbox, grid, transitions),
-* NodeJS
-* MongoDB
-
 # dbFlix – Full-Stack Demo Application
 
 dbFlix is a modern full-stack demo app designed to highlight clean UI patterns and a smooth user experience. The interface is built with React and styled-components, Flexbox, CSS Grid, and transitions.
