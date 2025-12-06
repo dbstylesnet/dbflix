@@ -7,18 +7,19 @@ Utilising modern UI solutions.
 * NodeJS
 * MongoDB
 
-#dbFlix – Full-Stack Demo Application
+# dbFlix – Full-Stack Demo Application
 
-dbFlix is a modern full-stack demo app designed to highlight clean UI patterns and a smooth user experience. The interface is built with React and styled-components, Flexbox, CSS Grid, and subtle transitions.
+dbFlix is a modern full-stack demo app designed to highlight clean UI patterns and a smooth user experience. The interface is built with React and styled-components, Flexbox, CSS Grid, and transitions.
 A Node.js backend and MongoDB database power the application.
+
+
+## Commands to start project:
+### npm install
+### npm start
 
 
 <img src="https://github.com/dbstylesnet/dbflix/blob/master/screenshot.png" alt="ProjectScreenshot" />
 
-
-Commands to start project:
-### npm install
-### npm start
 
 
 
