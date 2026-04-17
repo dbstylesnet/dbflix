@@ -17,16 +17,17 @@
     "yarn-run-all": "^3.1.1"
   },
   "scripts": {
-    "start": "npm run _start-backend",
+    "start": "npm run _start-frontend",
     "postinstall": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "start-all": "npm-run-all -p start _start-backend",
     "start-dev2": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build && npm-run-all -p react-scripts start start-backend",
     "start-dev": "npm-run-all -p start-normal _start-backend-dev",
     "start-dev-db": "npm-run-all -p _start-db _start-frontend _start-backend",
-    "_start-frontend": "react-scripts start",
+    "_start-frontend": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "_start-backend": "node src/backend/app.js",
     "_start-backend-dev": "nodemon ./src/backend/app.js",
-    "start-normal": "react-scripts start",
+    "seed": "node src/backend/seed.js",
+    "start-normal": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -33,10 +33,15 @@
 //     .catch(function (err) {})
 
 
-const MongoClient = require('mongodb').MongoClient
-const url = 'mongodb://localhost:27017/'
+const { MongoClient } = require('mongodb')
 
-const assert = require('assert');
+const url =
+    process.env.MONGO_URL ||
+    process.env.MONGODB_URI ||
+    'mongodb://localhost:27017/'
+
+let cachedClient = null
+let cachedDb = null
 
 // async function main() {
 //     let client, db
@@ -73,15 +78,15 @@ const assert = require('assert');
 
 function dbConnect() {
     return new Promise((resolve, reject) => {
+        if (cachedDb) return resolve(cachedDb)
+
         MongoClient.connect(url, function (err, client) {
-            // assert.equal(null, err);
-            if (err) throw err
-            console.log('Connected successfully to server');
-            const dbo = client.db('dbflix');
-            // console.log(dbo)
-            resolve(dbo);
-            // client.close();
-        });
+            if (err) return reject(err)
+            cachedClient = client
+            cachedDb = client.db('dbflix')
+            console.log('Connected successfully to server')
+            resolve(cachedDb)
+        })
     });
 }
 

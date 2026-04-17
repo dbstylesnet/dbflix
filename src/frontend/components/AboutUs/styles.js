@@ -5,6 +5,7 @@ const Wrapper = styled.div`
     color: white;
     font-size: 18px;
     margin: 60px 0 0 0;
+    padding: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -17,6 +18,11 @@ const Wrapper = styled.div`
         max-width: 80vw;
         margin: 0 10vw;
         text-indent: 30px;
+        text-align: left;
+    }
+    p {
+        margin: 0 0 18px 0;
+        padding: 0 0 18px 0;
         text-align: left;
     }
     ul {

@@ -4,6 +4,40 @@ const app = express()
 const db = require('./db')
 const port = process.env.PORT || 3002
 
+app.use(express.json())
+
+let dbo = null
+
+async function getDbo() {
+    if (dbo) return dbo
+    dbo = await db.dbConnect()
+    return dbo
+}
+
+app.get('/rest/movies', async (req, res) => {
+    try {
+        const dbo = await getDbo()
+        const movies = await dbo.collection('movies').find({}).toArray()
+        res.json(movies)
+    } catch (err) {
+        console.error(err)
+        res.status(500).json({ error: 'Failed to load movies' })
+    }
+})
+
+app.get('/rest/movies/:id', async (req, res) => {
+    try {
+        const dbo = await getDbo()
+        const movie = await dbo.collection('movies').findOne({ id: req.params.id })
+        if (!movie) return res.status(404).json({ error: 'Movie not found' })
+        res.json(movie)
+    } catch (err) {
+        console.error(err)
+        res.status(500).json({ error: 'Failed to load movie' })
+    }
+})
+
+// Legacy hardcoded fallback (kept for reference; route above is used)
 app.get('/rest/movies', (req, res) => res.send(
     [   
         {id: 'avengers', title: 'Avengers', description: 'The grave course of events set in motion by Thanos, that wiped out half the universe and fractured the Avengers ranks, compels the remaining Avengers to take one final stand in Marvel Studios\' grand conclusion to twenty-two films - Avengers: Endgame.'},
